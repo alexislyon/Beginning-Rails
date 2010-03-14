@@ -1,8 +1,10 @@
 class GreetingController < ApplicationController
   def index
-@welcome_message = "Welcome to this super cool Rails App"
+    @age   = 3
+    @table = {"headings" => ["addend", "addend", "sum"],
+      "body" => [[1, 1, 2], [1, 2, 3] , [ 1, 3, 4]]
+    }
+
+
   end
-  
-  
-  
 end

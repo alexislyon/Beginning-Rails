@@ -1,3 +1,35 @@
 <h1><%= @welcome_message %></h1>
 <p>Find me in app/views/greeting/index.html.erb</p>
 
+<h1>Simple little expression</h1>
+<p>My new app is <%= @age %> hours old.</p>
+
+<h1>Iteration using adorable little scriptlets</h1>
+<% for i in 1..7 %>
+<p>Heading number <%= i %> </p>
+<% end %>
+
+<h1>A cool table with no frills</h1>
+
+<table>
+	<tr>
+		<% @table["headings"].each do |head| %>
+		<td>
+			<b><%= head%></b>
+		</td>
+		<% end %>
+		</tr>
+
+		<% @table["body"].each do |row| %>
+		<tr>
+			<% row.each do |col| %>
+			<td>
+				<%= col %>
+			</td>
+			<% end %>
+		</tr>
+		<% end %>
+
+	</table>
+
+
